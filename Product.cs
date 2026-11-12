@@ -1,19 +1,15 @@
-using System.Collections.Concurrent;
+public class Product {
+    public string Name;
+    public double Price;
+    public string Category;
+    public int Stock;
+    public bool IsAvailable;
 
-public class Product
-{
-    public string name;
-    public double price;
-    public string category;
-    public int stock;
-    public bool isAva;
-
-    public Product(string productName,double productPrice, string productCaregory, int producktStok)
-    {
-        name = produckName
-        price = produckPrice
-        category = productCaregory
-        stock = producktStok
+    public Product(string name, double price, string category, int stock) {
+        Name = name;
+        Price = price;
+        Category = category;
+        Stock = stock;
+        IsAvailable = true;
     }
-
 }
