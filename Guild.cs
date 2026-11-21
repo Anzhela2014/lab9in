@@ -13,13 +13,27 @@ public class Guild {
             return false;
         }
 
-        foreach (Hero item in _heroes) {
-            if (item.Name == hero.Name) {
-                return false;
-            }
+        if (FindHeroByName(hero.Name) != null) {
+            return false;
         }
 
         _heroes.Add(hero);
         return true;
+    }
+
+    public Hero? FindHeroByName(string name) {
+        if (string.IsNullOrWhiteSpace(name)) {
+            return null;
+        }
+
+        string cleanName = name.Trim();
+
+        foreach (Hero hero in _heroes) {
+            if (hero.Name == cleanName) {
+                return hero;
+            }
+        }
+
+        return null;
     }
 }

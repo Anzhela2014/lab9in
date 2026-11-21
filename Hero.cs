@@ -1,9 +1,10 @@
+//черчеж героя какой он будет
 public class Hero {
     private string _name = "Безымянный герой";
 
     public string Name {
         get {
-            return _name;
+            return _name; //get для того чтобы передать из нэйм данные
         }
 
         private set {
@@ -12,11 +13,11 @@ public class Hero {
                 return;
             }
 
-            _name = value.Trim();
+            _name = value.Trim(); //убирает пробелы
         }
     }
 
-    public int Health { get; private set; }
+    public int Health { get; private set; } // менять можно только методам внутри херо
     public int MaxHealth { get; private set; }
     public int Level { get; private set; }
     public int Experience { get; private set; }
@@ -34,7 +35,7 @@ public class Hero {
             MaxHealth = 200;
         }
 
-        Health = health;
+        Health = health; //задаем здоровье
 
         if (Health < 0) {
             Health = 0;
