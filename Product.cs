@@ -12,4 +12,12 @@ public class Product {
         Stock = stock;
         IsAvailable = true;
     }
+
+    public void AddStock(int amount) {
+        if (amount <= 0) {
+            return;
+        }
+
+        Stock += amount;
+    }
 }
