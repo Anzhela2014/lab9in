@@ -26,4 +26,8 @@ public class Product {
 
         Stock += amount;
     }
+
+    public string GetInfo() {
+        return $"Товар: {Name}, категория: {Category}, цена: {Price} руб., на складе: {Stock}, в наличии: {IsAvailable}";
+    }
 }
